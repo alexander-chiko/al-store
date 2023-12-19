@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  &__input {
+    padding: 15px;
+    background-color: #eee;
+    margin-top: 5px;
+    border: none;
+  }
+  &__label {
+    font-weight: bold;
+  }
+}
