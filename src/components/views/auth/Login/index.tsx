@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./Login.module.scss";
 import { useRouter } from "next/router";
 import { FormEvent } from "react";
@@ -12,8 +11,7 @@ const LoginView = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const { push, query } = useRouter();
-
-  const callbackUrl: any = query.callback || "/";
+  const callbackUrl: any = query.callbackUrl || "/";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,6 +46,7 @@ const LoginView = () => {
       link="/auth/register"
       linkText={`Don't have an account? Sign up`}
     >
+      {error && <p className={styles.login__error}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <Input label="Email" name="email" type="email" />
         <Input label="Password" name="password" type="password" />
