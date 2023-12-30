@@ -1,6 +1,6 @@
 import styles from "./Button.module.scss";
 type Proptypes = {
-  type?: "button" | "submit" | "reset" | undefined;
+  type: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
   children: React.ReactNode;
   variant?: string;

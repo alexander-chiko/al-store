@@ -48,8 +48,13 @@ const LoginView = () => {
     >
       {error && <p className={styles.login__error}>{error}</p>}
       <form onSubmit={handleSubmit}>
-        <Input label="Email" name="email" type="email" />
-        <Input label="Password" name="password" type="password" />
+        <Input label="Email" name="email" type="email" placeholder="email" />
+        <Input
+          label="Password"
+          name="password"
+          type="password"
+          placeholder="password"
+        />
         <Button type="submit" className={styles.login__button}>
           {isLoading ? "Loading..." : "Login"}
         </Button>

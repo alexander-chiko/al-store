@@ -42,10 +42,20 @@ const RegisterView = () => {
       linkText="Have an account? Sign in"
     >
       <form onSubmit={handleSubmit}>
-        <Input label="Fullname" name="fullname" type="text" />
-        <Input label="Email" name="email" type="email" />
-        <Input label="Phone" name="phone" type="number" />
-        <Input label="Password" name="password" type="password" />
+        <Input
+          label="Fullname"
+          name="fullname"
+          type="text"
+          placeholder="Fullname"
+        />
+        <Input label="Email" name="email" type="email" placeholder="Email" />
+        <Input label="Phone" name="phone" type="number" placeholder="Phone" />
+        <Input
+          label="Password"
+          name="password"
+          type="password"
+          placeholder="Password"
+        />
         <Button
           disabled={isLoading}
           type="submit"
